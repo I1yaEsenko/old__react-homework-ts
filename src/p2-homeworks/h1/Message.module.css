@@ -1,3 +1,62 @@
 .message {
+    display: flex;
+    background-color: greenyellow;
+    padding: 20px 10px;
+}
 
+.img{
+    margin-right: 10px;
+    align-self: flex-end;
+
+}
+
+.img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+
+}
+.wrapper{
+    max-width: 300px;
+    min-height: 45px;
+    display: flex;
+    background-color: #000;
+    border-radius: 5px 5px 5px 0px;
+    position: relative;
+    opacity: 0.75;
+}
+
+.wrapper:before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    bottom: -1px;
+    left: -10px;
+    z-index: -1;
+    background: inherit;
+    clip-path: url(#svgPath);
+    transform: scaleX(-1);
+}
+
+.item{
+    padding: 8px 15px;
+}
+.title{
+    font-size: 16px;
+    font-weight: 600;
+    color: mediumpurple;
+    margin-bottom: 6px;
+}
+.text{
+    color: #fff;
+    font-size: 14px;
+
+}
+.date{
+    font-size: 13px;
+    opacity: 0.5;
+    color: #fff;
+    align-self: flex-end;
+    padding: 4px
 }
