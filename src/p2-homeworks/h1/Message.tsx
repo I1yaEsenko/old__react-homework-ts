@@ -22,7 +22,7 @@ function Message(props: MessagePropsType) {
       <svg height="0" width="0">
         <defs>
           <clipPath id="svgPath">
-            <path fill="#FFFFFF" d="M10,10H0V0H0A10,10,0,0,0,10,10Z"/>
+            <path fill="#FFFFFF" d="M10,10H0V0H0A10,12,0,0,0,8,9Z"/>
           </clipPath>
         </defs>
       </svg>

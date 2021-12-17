@@ -1,3 +1,32 @@
-.someClass {
+.mainWrapper{
+    background-color: #f8f8f8;
+    padding: 10px;
+}
 
+.affairs{
+    margin: 0 auto;
+}
+
+.wrapper{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    flex:0 0 40%;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+.priority{
+    flex: 1 1 auto;
+}
+.button{
+
+}
+
+.priorityButton{
+    margin: 0 10px 0 0;
 }

@@ -2,6 +2,7 @@
     display: flex;
     background-color: greenyellow;
     padding: 20px 10px;
+    margin: 10px 0;
 }
 
 .img{
@@ -31,8 +32,8 @@
     content: '';
     width: 10px;
     height: 10px;
-    bottom: -1px;
-    left: -10px;
+    bottom: 0;
+    left: -9px;
     z-index: -1;
     background: inherit;
     clip-path: url(#svgPath);
