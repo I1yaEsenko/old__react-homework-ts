@@ -6,42 +6,41 @@
 }
 
 .img{
-    margin-right: 10px;
+    display: block;
+    margin-right: 15px;
     align-self: flex-end;
-
+    width: 50px;
+    height: 50px;
 }
 
 .img img{
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
-
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 .wrapper{
     max-width: 300px;
     min-height: 45px;
     display: flex;
     background-color: #000;
-    border-radius: 5px 5px 5px 0px;
+    border-radius: 5px 5px 5px 0;
     position: relative;
-    opacity: 0.75;
+    opacity: 0.3;
 }
 
 .wrapper:before{
     position: absolute;
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, rgba(0, 0, 0, 1) 0);
+    left: -15px;
     bottom: 0;
-    left: -9px;
-    z-index: -1;
-    background: inherit;
-    clip-path: url(#svgPath);
-    transform: scaleX(-1);
+
 }
 
 .item{
-    padding: 8px 15px;
+    padding: 8px 7px;
 }
 .title{
     font-size: 16px;

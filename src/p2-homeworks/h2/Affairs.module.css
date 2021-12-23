@@ -30,3 +30,13 @@
 .priorityButton{
     margin: 0 10px 0 0;
 }
+
+.high{
+    color: cornflowerblue;
+}
+.middle{
+    color:goldenrod;
+}
+.low{
+    color:indianred;
+}
