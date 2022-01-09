@@ -27,8 +27,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         }
     }
     const addUser = () => {
-        alert(`Hello ` + name + ` !`) // need to fix
-        addUserCallback(name)
+        if (name !== '') {
+            addUserCallback(name)
+            alert(`Hello ` + name + ` !`) // need to fix
+        } else {
+            alert('Enter new name!')
+        }
         setName('')
     }
 

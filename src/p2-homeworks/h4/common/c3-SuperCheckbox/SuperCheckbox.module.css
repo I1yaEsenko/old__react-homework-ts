@@ -1,5 +1,36 @@
-.checkbox {
 
+
+.superCheckbox[type="checkbox"] {
+    display:none;
+}
+.superCheckbox[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url("check_radio_sheet.png") left top no-repeat;
+    cursor:pointer;
+}
+
+.superCheckbox[type="checkbox"] {
+    display:none;
+}
+.superCheckbox[type="checkbox"] + span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url("check_radio_sheet.png") left top no-repeat;
+    cursor:pointer;
+}
+.superCheckbox[type="checkbox"]:checked + span {
+    background:url("check_radio_sheet.png") -19px top no-repeat;
+}
+
+.checkbox {
+    width: 100px;
 }
 
 .spanClassName {
