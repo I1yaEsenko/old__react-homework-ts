@@ -1,0 +1,17 @@
+.superSpan{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #f8f8f8;
+    width: 250px;
+    min-height: 40px;
+    margin: 5px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    box-shadow: rgba(163, 163, 163, 0.2) 5px 5px 4px 0;
+    font-size: 14px;
+    font-style: italic;
+    cursor: pointer;
+    outline: none;
+}
+

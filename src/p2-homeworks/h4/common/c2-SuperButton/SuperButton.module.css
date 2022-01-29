@@ -2,14 +2,13 @@
     width: 150px;
     appearance: none;
     background-color: transparent;
-    border: 2px solid #66A182;
+    border: 2px solid #2c8a58;
     border-radius: 10px;
-    color: #66A182;
+    color: #2c8a58;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 400;
     line-height: 1;
-    margin:8px 0;
+    margin:5px 3px;
     padding: 15px 30px;
     text-decoration: none;
     text-align: center;
@@ -18,7 +17,7 @@
     font-weight: 700;
 }
 .btn:hover, .btn:focus {
-    color: #fff;
+    color: rgba(10, 10, 4, 0.77);
     outline: 0;
 }
 
@@ -26,7 +25,7 @@
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 .btnShadow:hover {
-    box-shadow: 0 0 40px 40px #66A182 inset;
+    box-shadow: 0 0 40px 40px #2c8a58 inset;
 }
 
 .red{
