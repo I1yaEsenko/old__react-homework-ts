@@ -1,33 +1,41 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import {PATH} from "./RoutesLink";
-import s from './main.module.css'
-
+import './main.css'
+import 'boxicons'
 
 let setActive: (string | ((props: { isActive: boolean; }) => string) | undefined) =
-   ({isActive}) => !isActive ? `${s.link}` : `${s.active} ${s.link}`;
+   ({isActive}) => !isActive ? 'link' : 'active link';
 
 function Header() {
+   const [close, setClose] = useState<boolean>(false)
 
+   const addCloseClass = () => {
+      setClose(!close)
+   }
    return (
-      <div className={s.header}>
-         <input type="checkbox" id="hmt" className={s.hiddenMenuTicker}/>
-         <label className={s.menuSpan} htmlFor={'hmt'}>
-            <span className={s.first}></span>
-            <span className={s.second}></span>
-            <span className={s.third}></span>
-         </label>
-         <ul className={s.menu}>
-            <NavLink to={PATH.PRE_JUNIOR}
-                     className={setActive}
-            >Pre-junior</NavLink>
-            <NavLink to={PATH.JUNIOR}
-                     className={setActive}
-            >Junior</NavLink>
-            <NavLink to={PATH.JUNIOR_PLUS}
-                     className={setActive}
-            >Junior-Plus</NavLink>
-         </ul>
+
+      <div className={close ? `${'sidebar'} ${'close'}` : 'sidebar'}>
+         <div className='wrapper'>
+            <div className='toggle-bar'>
+               <i className='bx bx-chevron-left toggle' onClick={addCloseClass}></i>
+            </div>
+
+            <ul className='menu'>
+               <li>
+                  <NavLink to={PATH.PRE_JUNIOR} className={setActive}><i className='bx bx-angry icon'></i><span className='text'>Pre-junior</span></NavLink>
+               </li>
+               <li>
+                  <NavLink to={PATH.JUNIOR} className={setActive}> <i className='bx bx-smile icon'></i><span className='text'>Junior</span></NavLink>
+               </li>
+               <li>
+                  <NavLink to={PATH.JUNIOR_PLUS} className={setActive}><i className='bx bx-happy-beaming icon'></i><span className='text'>Junior-Plus</span></NavLink>
+               </li>
+
+            </ul>
+         </div>
+
+
       </div>
    )
 }

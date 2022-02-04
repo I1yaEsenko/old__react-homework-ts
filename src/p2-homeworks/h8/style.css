@@ -1,0 +1,20 @@
+
+.stateClass{
+    border: 1px solid lightgray;
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 23px;
+    margin: 5px;
+}
+
+.homework{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hw8_wrapper{
+    border: 2px solid black;
+    max-width: 300px;
+    border-radius: 6px;
+}
