@@ -42,11 +42,11 @@ function HW8() {
             {/*should work (должно работать)*/}
            <div className='hw8_wrapper'>{finalPeople}</div>
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-            <div><SuperButton onClick={checkAge}>check 18</SuperButton></div>
-
-
+           <div className='buttons'>
+              <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+              <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+              <div><SuperButton onClick={checkAge}>check 18</SuperButton></div>
+           </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}

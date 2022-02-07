@@ -9,12 +9,13 @@
     font-size: 14px;
     line-height: 1;
     margin:5px 3px;
-    padding: 15px 30px;
+    padding: 10px 15px;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    min-height: 50px;
 }
 .btn:hover, .btn:focus {
     color: rgba(10, 10, 4, 0.77);

@@ -1,52 +1,58 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import './style.css'
 
 function Clock() {
-    const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
-    const [show, setShow] = useState<boolean>(false)
+   const [timerId, setTimerId] = useState<number>(0)
+   const [date, setDate] = useState<Date>()
+   const [show, setShow] = useState<boolean>(false)
 
-    const stop = () => {
-        // stop
-    }
-    const start = () => {
-        stop()
-        const id: number = window.setInterval(() => {
-            // setDate
-        }, 1000)
-        setTimerId(id)
-    }
+   const stop = () => {
+      clearInterval(timerId)
+   }
+   const start = () => {
+      stop()
+      const id: number = window.setInterval(() => {
 
-    const onMouseEnter = () => {
-        // show
-    }
-    const onMouseLeave = () => {
-        // close
-    }
+         setDate(new Date()) // setDate
+      }, 1000)
+      setTimerId(id)
+   }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+   const onMouseEnter = () => {
+      setShow(true)// show
+   }
+   const onMouseLeave = () => {
+      setShow(false) // close
+   }
 
-    return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+   const stringTime = date?.toLocaleTimeString() // fix with date
+   const stringDate = date?.toLocaleDateString() // fix with date
+
+   return (
+      <div>
+         <div className='time-wrapper'>
+            <div className='time'
+                 onMouseEnter={onMouseEnter}
+                 onMouseLeave={onMouseLeave}
             >
-                {stringTime}
+               {stringTime}
             </div>
 
             {show && (
-                <div>
-                    {stringDate}
-                </div>
+               <div className='date'>
+                  {stringDate}
+               </div>
             )}
-
+         </div>
+         <div>
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
+         </div>
 
-        </div>
-    )
+
+      </div>
+   )
 }
 
 export default Clock

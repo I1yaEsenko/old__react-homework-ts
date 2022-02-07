@@ -18,3 +18,6 @@
     max-width: 300px;
     border-radius: 6px;
 }
+.buttons{
+    display: flex;
+}
